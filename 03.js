@@ -21,7 +21,17 @@
 
 function devuelvePares(lista) {
   // Aquí tu código
+  let array = [];
+  let curr = lista.head;
+  while (curr) {
+    if (curr.value % 2 === 0) {
+      array.push(curr.value); }
+    curr = curr.next;}
+  if (array.length > 0) { return array; } 
+  else { return false;
+  }
 }
+
 
 //⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = devuelvePares;
