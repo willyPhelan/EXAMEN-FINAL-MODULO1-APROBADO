@@ -73,7 +73,23 @@ const productos = {
 
 BinarySearchTree.prototype.agregarProductos = function (nombreProducto) {
   // Aquí tu código
-};
+  if(productos[nombreProducto] == productos[this.value]) return 'Ya existe el producto' ;
+  if(!productos.hasOwnProperty(nombreProducto)) return 'Producto inexistente' ;
+  if(productos[nombreProducto] > productos[this.value]){
+  if(this.right === null){
+  let newTree = new BinarySearchTree(nombreProducto) ;
+  this.right = newTree ;
+  return newTree ; }    
+  else this.right.agregarProductos(nombreProducto)
+  } else {
+  if(this.left === null){
+  let newTree = new BinarySearchTree(nombreProducto) ;
+  this.left = newTree ;
+  return newTree ;}    
+  else this.left.agregarProductos(nombreProducto)     }
+  return new BinarySearchTree(nombreProducto)
+}; 
+ 
 
 //⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = { BinarySearchTree };
