@@ -54,10 +54,9 @@
 //    han abonado correctamente.
 //  - En caso de quedarse sin clientes en la fila, la función debe retornar false.
 
-function cobrarClientes(clientes) {
-  if (){}
+function cobrarClientes(clientes) {return clientes}
   // Aquí tu código
-}
+
 
 //⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = cobrarClientes;
