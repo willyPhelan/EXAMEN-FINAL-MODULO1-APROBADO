@@ -16,8 +16,17 @@ ACLARACIÓN: El indice debe arrancar desde 0, como con los bucles for.
  
 LinkedList.prototype.indexOf = function (value) { 
   // Tu código aca:
+  if (this.head === null) return false;
+  let i = 0;
+  let curr = this.head;
+  while (curr) {
+    if (curr.value === value) return i;
+    i++;
+    curr = curr.next;
+  }
+  return -1;
+};
  
-}
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = {
   LinkedList

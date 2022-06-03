@@ -40,8 +40,24 @@ const { BinarySearchTree } = require("./DS");
 // retornar el string que ha sido insertado
 
 BinarySearchTree.prototype.insertWord = function (palabra) {
-  // Tu código acá
-};
+  if (palabra=="") return false ;
+  if(palabra.length === this.value.length) return false;
+  if (palabra.length >= this.value.length) {
+      if (this.right === null) { //(primero preg derecha)
+         this.right = new BinarySearchTree(palabra);
+      } else { this.right.insertWord(palabra); }
+    } else if (palabra.length < this.value.length) { //pregunto izq
+      if (this.left === null) {
+         this.left = new BinarySearchTree(palabra);
+      } else { this.left.insertWord(palabra);
+      }
+    }
+   
+  
+  return palabra;}
+
+ 
+
 
 //⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = { BinarySearchTree };

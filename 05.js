@@ -18,8 +18,16 @@
 
 function telefonoDescompuesto(string) {
   // Tu código aca:
- 
+  return function () {
+    if (string == null) return false ; 
+    if (string == undefined) return false ; 
+    if (string == "") return false;
+
+    return string.replace(/[aeiou]/gi, "");
+  };
 }
+ 
+
 
 // ⚠️ NO MODIFICAR NADA POR DEBAJO DE ESTA LÍNEA ⚠️
 module.exports = telefonoDescompuesto;
