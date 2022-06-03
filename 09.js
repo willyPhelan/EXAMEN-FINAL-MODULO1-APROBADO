@@ -40,21 +40,22 @@ const { BinarySearchTree } = require("./DS");
 // retornar el string que ha sido insertado
 
 BinarySearchTree.prototype.insertWord = function (palabra) {
-  if (palabra=="") return false ;
-  if(palabra.length === this.value.length) return false;
+
+  if (palabra === '') return false ; // si esta vacio...
+  if(palabra.length === this.value.length) return false ; // si es igual..
+  
   if (palabra.length >= this.value.length) {
-      if (this.right === null) { //(primero preg derecha)
+      if (this.right === null) { //derecha
          this.right = new BinarySearchTree(palabra);
-      } else { this.right.insertWord(palabra); }
-    } else if (palabra.length < this.value.length) { //pregunto izq
+      } else { this.right.insertWord(palabra); }}
+
+     else if (palabra.length < this.value.length) { // izq
       if (this.left === null) {
          this.left = new BinarySearchTree(palabra);
       } else { this.left.insertWord(palabra);
       }
-    }
-   
-  
-  return palabra;}
+    } return palabra ;
+  }
 
  
 

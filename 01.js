@@ -73,16 +73,16 @@ const productos = {
 
 BinarySearchTree.prototype.agregarProductos = function (nombreProducto) {
   // Aquí tu código
-  if(productos[nombreProducto] == productos[this.value]) return 'Ya existe el producto' ;
-  if(!productos.hasOwnProperty(nombreProducto)) return 'Producto inexistente' ;
-  if(productos[nombreProducto] > productos[this.value]){
+  if(productos[nombreProducto] == productos[this.value]) return 'Ya existe el producto' ; // si el producto que le paso es igual al del obj...
+  if(!productos.hasOwnProperty(nombreProducto)) return 'Producto inexistente' ; // si el obj no tiene la propiedad...
+  if(productos[nombreProducto] > productos[this.value]){ // // si el parametro es mayor a la prop...
   if(this.right === null){
-  let newTree = new BinarySearchTree(nombreProducto) ;
-  this.right = newTree ;
+  let newTree = new BinarySearchTree(nombreProducto) ; 
+  this.right = newTree ; //asigno a la derecha el valor que pase por paramet
   return newTree ; }    
-  else this.right.agregarProductos(nombreProducto)
+  else this.right.agregarProductos(nombreProducto)// sino...recursion
   } else {
-  if(this.left === null){
+  if(this.left === null){  //si es menor...
   let newTree = new BinarySearchTree(nombreProducto) ;
   this.left = newTree ;
   return newTree ;}    

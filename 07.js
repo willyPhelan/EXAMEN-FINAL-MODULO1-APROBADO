@@ -19,18 +19,14 @@
 
 var restArray = function(array){
     // Tu código acá
-    var contador = 0 ;
+    var count = 0 ;
     for (var i = 0 ; i < array.length ; i++) {
-      if (Array.isArray(array[i])) {
-        contador = contador + restArray(array[i]) - 1 ;
+      if (Array.isArray(array[i])) { // si hay array anidado
+        count = count + restArray(array[i]) - 1 ; //voy sumando sin contar al padre
       } else {
-        contador = contador + array[i] ;
+        count = count + array[i] ; }
       }
-    }
-    return contador ;
-
-
-}
+    return count ; }
 
 // No modifiques nada debajo de esta linea //
 

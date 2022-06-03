@@ -54,7 +54,7 @@
 //    han abonado correctamente.
 //  - En caso de quedarse sin clientes en la fila, la función debe retornar false.
 
-function cobrarClientes(clientes) {return clientes}
+function cobrarClientes(clientes) {}
   // Aquí tu código
 
 

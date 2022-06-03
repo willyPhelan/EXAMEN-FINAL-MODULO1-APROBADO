@@ -22,7 +22,7 @@
 function devuelvePares(lista) {
   // Aquí tu código
   let array = [];
-  let curr = lista.head;
+  let curr = lista.head; //defino head
   while (curr) {
     if (curr.value % 2 === 0) {
       array.push(curr.value); }

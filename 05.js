@@ -21,10 +21,10 @@ function telefonoDescompuesto(string) {
   return function () {
     if (string == null) return false ; 
     if (string == undefined) return false ; 
-    if (string == "") return false;
+    if (string == "") return false ;
 
-    return string.replace(/[aeiou]/gi, "");
-  };
+    return string.replace(/[aeiou]/gi, "") ;
+  }
 }
  
 
