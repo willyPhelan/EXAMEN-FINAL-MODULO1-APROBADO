@@ -19,6 +19,16 @@
 
 var restArray = function(array){
     // Tu código acá
+    var contador = 0;
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        contador = contador + restArray(array[i]) - 1;
+      } else {
+        contador = contador + array[i];
+      }
+    }
+    return contador;
+
 
 }
 
